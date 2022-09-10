@@ -1,7 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import "./App.css";
 import Header from "./Components/Header";
@@ -9,7 +6,6 @@ import NotePage from "./Pages/NotePage";
 import NotesPage from "./Pages/NotesPage";
 
 function App() {
-
   return (
     <Router>
       <div className="container dark">
