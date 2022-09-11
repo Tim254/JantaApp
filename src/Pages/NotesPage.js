@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react'
+import AddButton from '../Components/AddButton'
 // import notes from '../assets/data'
 import ListItem from '../Components/ListItem'
+
 
 const NotesPage = () => {
   let [notes, setNotes] = useState([])
@@ -29,6 +31,7 @@ const NotesPage = () => {
 
         ))}
       </div>
+      <AddButton/>
       
     </div>
   )
