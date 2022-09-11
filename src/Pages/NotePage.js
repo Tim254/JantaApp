@@ -20,7 +20,7 @@ function NotePage({ match , history}) {
 
 }
 let createNote = async () => {
-  await fetch(`http://localhost:5000/notes/${noteId}`, {
+  await fetch(`http://localhost:5000/notes/`, {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json'
