@@ -9,11 +9,13 @@ function NotePage({ match }) {
   let [note, setNote] = useState(null)
 
   useEffect(()=> {
-
+      getNote()
   }, [noteId])
   // let note = notes.find((note) => note.id == noteId);
-getMote = async() =>{
+  let getNote = async() =>{
   let response = await fetch(`http://localhost:5000/notes/${noteId}`)
+  let data = await response.json()
+  setNote(data)
 
 }
 
@@ -26,7 +28,7 @@ getMote = async() =>{
           </Link>
         </h3>
       </div>
-      <textarea value={note?.body}></textarea>
+      <textarea onChange={(e)=> {setNote({...note, 'body':e.target.value})}} value={note?.body}></textarea>
     </div>
   );
 }
