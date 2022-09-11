@@ -13,14 +13,14 @@ function NotePage({ match , history}) {
   }, [noteId])
   // let note = notes.find((note) => note.id == noteId);
   let getNote = async() =>{
-    if(noteId === 'new') return
+    if (noteId == 'new') return
   let response = await fetch(`http://localhost:5000/notes/${noteId}`)
   let data = await response.json()
   setNote(data)
 
 }
 let createNote = async () => {
-  await fetch(`http://localhost:5000/notes/${noteId}`, {
+  await fetch(`http://localhost:5000/notes/`, {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json'
@@ -51,13 +51,14 @@ let deleteNote = async () => {
 }
 
 let handleSubmit = () => {
-  if(noteId != 'new' && !note.body) {
-    deleteNote()
+  if (noteId != "new" && !note.body) {
+      deleteNote()
+  } else if (noteId != "new") {
+      updateNote()
+  } else if (noteId === 'new' && note !== null) {
+      createNote()
   }
-  else if (noteId !== 'new') {
-    updateNote()
-  }
-  updateNote()
+
   history.push('/')
 }
 
