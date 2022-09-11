@@ -13,10 +13,20 @@ function NotePage({ match , history}) {
   }, [noteId])
   // let note = notes.find((note) => note.id == noteId);
   let getNote = async() =>{
+    if(noteId === 'new') return
   let response = await fetch(`http://localhost:5000/notes/${noteId}`)
   let data = await response.json()
   setNote(data)
 
+}
+let createNote = async () => {
+  await fetch(`http://localhost:5000/notes/${noteId}`, {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ ...note, 'updated': new Date() })
+})
 }
 
 let updateNote = async () => {
