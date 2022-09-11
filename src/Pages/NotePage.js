@@ -19,6 +19,15 @@ function NotePage({ match }) {
 
 }
 
+let updateNote = async () => {
+  await fetch(`http://localhost:5000/notes/${noteId}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application',
+      body:JSON.stringify({...note, 'updated'})
+    }
+  })
+}
   return (
     <div className="note">
       <div className="note-header">
