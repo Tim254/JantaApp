@@ -59,7 +59,12 @@ let handleSubmit = () => {
             <ArrowLeft onClick={handleSubmit} />
           </Link>
         </h3>
-        <button onClick={deleteNote}>Delete</button>
+        {noteId !== 'new' ?(
+           <button onClick={deleteNote}>Delete</button>
+        ): (
+          <button>Done</button>
+        )}
+       
       </div>
       <textarea onChange={(e) => { setNote({ ...note, 'body': e.target.value })}} value={note?.body}></textarea>
     </div>
