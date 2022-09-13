@@ -5,7 +5,7 @@ function Cost({name, cost, id, handleDelete, category, employee, activity, time}
 
 
     return(
-        <Card bg='light'>
+        <Card style={{marginBottom: '2em'}} bg='light'>
             <Card.Header>{name}</Card.Header>
             <Card.Body>
                 <Card.Text>
@@ -16,7 +16,7 @@ function Cost({name, cost, id, handleDelete, category, employee, activity, time}
                     Time: {time.slice(0,10)}<br></br>
                 </Card.Text>
             </Card.Body>
-            <Button onClick={()=>handleDelete(id)} size="sm">Delete Cost</Button>
+            <Button style={{color: '#f68657', backgroundColor: 'black', fontSize: '1em', border: 'none'}} onClick={()=>handleDelete(id)} size="sm">Delete Cost</Button>
         </Card>
     )
 }

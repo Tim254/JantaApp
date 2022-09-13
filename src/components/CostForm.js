@@ -1,5 +1,6 @@
 import React, { useState} from "react";
 import {Button, Form } from 'react-bootstrap'
+import './App.css'
 
 function CostForm({costs, setCosts, activities, employees}) {
     const [state,setState] = useState({
@@ -58,14 +59,14 @@ function CostForm({costs, setCosts, activities, employees}) {
     }
 
     return (
-        <Form onSubmit={handleSubmit}>
-            <Form.Group >
+        <Form  onSubmit={handleSubmit}>
+            <Form.Group className="cost-form" >
                 <Form.Label>Add New Cost</Form.Label>
-                <Form.Control name="name" placeholder="name" onChange={handleChange} value={state.name}></Form.Control>
-                <Form.Control name="cost" placeholder="cost" onChange={handleChange} value={state.cost}></Form.Control>
-                <Form.Control name="category" placeholder="category" onChange={handleChange} value={state.category}></Form.Control>
-                <Form.Select name="employee"  onChange={handleChange} value={state.employee}>{employeeOptions}</Form.Select>
-                <Form.Select name="activity" onChange={handleChange} value={state.activity}>{activityOptions}</Form.Select>
+                <Form.Control style={{marginBottom: '0.8em'}} name="name" placeholder="name" onChange={handleChange} value={state.name}></Form.Control>
+                <Form.Control style={{marginBottom: '0.8em'}} name="cost" placeholder="cost" onChange={handleChange} value={state.cost}></Form.Control>
+                <Form.Control style={{marginBottom: '0.8em'}} name="category" placeholder="category" onChange={handleChange} value={state.category}></Form.Control>
+                <Form.Select style={{marginBottom: '0.8em'}} name="employee"  onChange={handleChange} value={state.employee}>{employeeOptions}</Form.Select>
+                <Form.Select  name="activity" onChange={handleChange} value={state.activity}>{activityOptions}</Form.Select>
                 <Button type="submit">Add Cost</Button>
             </Form.Group>
         </Form>

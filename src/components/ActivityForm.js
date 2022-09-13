@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {Button, Container, Form} from 'react-bootstrap'
-
+import './App.css'
 function ActivityForm({activities, setActivities}) {
     const [state,setState] = useState({
         name: "",
@@ -53,13 +53,13 @@ function ActivityForm({activities, setActivities}) {
     }
 
     return (
-    <Container >
+    <Container  className="activity-form"  >
         <Form onSubmit={handleSubmit}>
             <Form.Group >
                 <Form.Label>Create New Activity</Form.Label>
-                <Form.Control name="name" placeholder="name" value={state.name} onChange={handleChange}></Form.Control>
-                <Form.Control name="hours" placeholder="hours" value={state.hours} onChange={handleChange}></Form.Control>
-                <Form.Control name="cost" placeholder="cost" value={state.cost} onChange={handleChange}></Form.Control>
+                <Form.Control style={{marginBottom: '10px',}} name="name" placeholder="name" value={state.name} onChange={handleChange}></Form.Control>
+                <Form.Control style={{marginBottom: '10px',}}  name="hours" placeholder="hours" value={state.hours} onChange={handleChange}></Form.Control>
+                <Form.Control style={{marginBottom: '10px',}}  name="cost" placeholder="cost" value={state.cost} onChange={handleChange}></Form.Control>
                 <Button type="submit">Add Activity</Button>   
             </Form.Group>
         </Form>

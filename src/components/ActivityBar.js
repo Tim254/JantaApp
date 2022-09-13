@@ -6,8 +6,8 @@ function ActivityBar({name, hours, all_activities_hours, previousHours, handleCl
     const offset = Math.round(100*previousHours/all_activities_hours)
 
     return (
-        <div style={{width: `${width}%`, backgroundColor:"red", marginLeft:`${offset}%`}} onClick={handleClick}>
-            <p style={{color:"black"}}>{name}</p>
+        <div style={{width: `${width}%`,display:'flex', justifyContent: 'center', alignItems:'center', backgroundColor:"red", borderRadius: '5px', padding: '1px', marginLeft:`${offset}%`}} onClick={handleClick}>
+            <p style={{color:"black", margin: '5px' }}>{name}</p>
         </div>
     )
 

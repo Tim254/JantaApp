@@ -5,6 +5,8 @@ import Home from "./Home"
 import Schedule from "./Schedule"
 import UpdateCosts from "./UpdateCosts"
 import 'bootstrap/dist/css/bootstrap.min.css'
+// import './App.css'
+
 
 import 'react-bootstrap'
 
