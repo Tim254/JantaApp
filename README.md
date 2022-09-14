@@ -52,7 +52,7 @@ This is a project management web app where a user can create tasks, schedule and
 
 ## Live Link
 
-Or you can access the web application directly via this [LINK.]()
+Or you can access the web application directly via this [LINK.](https://janta-app.vercel.app/)
 
 ---
 
