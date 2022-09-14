@@ -14,7 +14,7 @@ This is a project management web app where a user can create tasks, schedule and
 
 ## SCREENSHOTS
 
-![image](./images/Screenshot.png)
+![image](./src/images/Screenshot.png)
 
 ---
 
