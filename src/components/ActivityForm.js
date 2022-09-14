@@ -33,7 +33,7 @@ function ActivityForm({activities, setActivities}) {
         }
 
         if (checkIfNumber(activityObj.estimated_cost) && checkIfNumber(activityObj.estimated_hours)) {
-            fetch(`http://localhost:9292/activities`, {
+            fetch(`https://janta-app.herokuapp.com/activities`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

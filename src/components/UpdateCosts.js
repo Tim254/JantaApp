@@ -9,13 +9,13 @@ function UpdateCosts({ activities, costs, setCosts, employees }) {
   const [totalCost, setTotalCost] = useState(0);
 
   useEffect(() => {
-    fetch(`http://localhost:9292/project_cost`)
+    fetch(`https://janta-app.herokuapp.com/project_cost`)
       .then((r) => r.json())
       .then((total) => setTotalCost(total));
   }, [costs]);
 
   function handleDelete(id) {
-    fetch(`http://localhost:9292/costs/${id}`, {
+    fetch(`https://janta-app.herokuapp.com/costs/${id}`, {
       method: "DELETE",
     });
     const updatedCosts = costs.filter((cost) => cost.id !== id);

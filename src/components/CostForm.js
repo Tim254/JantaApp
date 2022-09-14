@@ -36,7 +36,7 @@ function CostForm({costs, setCosts, activities, employees}) {
         const costObj = {'name': state.name, 'total_cost': state.cost, 'category': state.category, 'employee_id': employee.id,'activity_id': activity.id}
 
         if (!isNaN(parseInt(costObj.total_cost))) {
-            fetch(`http://localhost:9292/costs`, {
+            fetch(`https://janta-app.herokuapp.com/costs`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

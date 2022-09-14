@@ -16,16 +16,16 @@ function App() {
   const [employees,setEmployees] = useState([])
 
    useEffect(()=>{
-        fetch(`http://localhost:9292/employees`)
+        fetch(`https://janta-app.herokuapp.com/employees`)
             .then((r)=> r.json())
             .then((data)=> setEmployees(data))
    },[])
 
   useEffect(()=>{
-    fetch("http://localhost:9292/activities")
+    fetch("https://janta-app.herokuapp.com/activities")
       .then((r) => r.json())
       .then((data) => setActivities(data))
-    fetch("http://localhost:9292/costs")
+    fetch("https://janta-app.herokuapp.com/costs")
       .then((r) => r.json())
       .then((data) => setCosts(data));
     ;},[])

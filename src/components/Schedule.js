@@ -12,7 +12,7 @@ function Schedule({ activities, setActivities, setCosts }) {
   const [totalHours, setTotalHours] = useState(0);
 
   useEffect(() => {
-    fetch("http://localhost:9292/project_hours")
+    fetch("https://janta-app.herokuapp.com/project_hours")
       .then((r) => r.json())
       .then((hours) => setTotalHours(hours));
   }, [activities]);
@@ -33,7 +33,7 @@ function Schedule({ activities, setActivities, setCosts }) {
   function handleOrderChange(e, order, id) {
     e.preventDefault();
     const newOrder = parseInt(order) + parseInt(e.target.value);
-    fetch(`http://localhost:9292/activities/${id}`, {
+    fetch(`https://janta-app.herokuapp.com/activities/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -48,7 +48,7 @@ function Schedule({ activities, setActivities, setCosts }) {
   }
 
   function handleDelete(id) {
-    fetch(`http://localhost:9292/activities/${id}`, {
+    fetch(`https://janta-app.herokuapp.com/activities/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
