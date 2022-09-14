@@ -17,25 +17,27 @@ function Home() {
         <Row>
           <Col>
           
-            <h1 className="heda" style={{ fontSize: "6em", color: "#d6d1d1" }}><img src="./images/boba.jpg"/>Janta</h1>
-          </Col>
-        </Row>
-        <br></br>
-        <Row>
-          <Col>
-            <NavLink className="btn btn-primary" to="/schedule">
-              Create Schedule
-            </NavLink>
+            <h1 className="heda" style={{ fontSize: "6em", color: "#d6d1d1" }}>Janta</h1>
+            <h5 className="heda5">For all your project management needs</h5>
           </Col>
         </Row>
         <br></br>
         <Row>
           <Col>
             <NavLink className="btn btn-primary" to="/update-costs">
-              Track  Costs
+              Project  Costs
             </NavLink>
           </Col>
         </Row>
+        <br></br>
+        <Row>
+          <Col>
+            <NavLink className="btn btn-primary" to="/schedule">
+              Project Schedule
+            </NavLink>
+          </Col>
+        </Row>
+        <br></br>
       </home-container>
     </Container>
   );

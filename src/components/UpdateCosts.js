@@ -51,7 +51,7 @@ function UpdateCosts({ activities, costs, setCosts, employees }) {
         <Navbar.Brand
           style={{ marginLeft: "10px", color: "#f68657", fontSize: "1em" }}
         >
-          Update Costs
+          Janta
         </Navbar.Brand>
         <NavLink style={{ color: "#999", textDecoration: "none" }} exact to="/">
           Home
@@ -61,6 +61,12 @@ function UpdateCosts({ activities, costs, setCosts, employees }) {
           to="/schedule"
         >
           Schedule
+        </NavLink>
+        <NavLink
+          style={{ color: "#999", marginLeft: "10px", textDecoration: "none" }}
+          to="/update-costs"
+        >
+          Costs
         </NavLink>
       </Navbar>
       <br></br>

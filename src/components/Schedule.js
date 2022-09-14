@@ -96,6 +96,12 @@ function Schedule({ activities, setActivities, setCosts }) {
         >
           Schedule
         </NavLink>
+        <NavLink
+          style={{ color: "#999", marginLeft: "10px", textDecoration: "none" }}
+          to="/update-costs"
+        >
+          Costs
+        </NavLink>
       </Navbar>
       <br></br>
       <h1
