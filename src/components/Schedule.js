@@ -85,7 +85,7 @@ function Schedule({ activities, setActivities, setCosts }) {
         <Navbar.Brand
           style={{ marginLeft: "10px", color: "#f68657", fontSize: "1em" }}
         >
-          Update Costs
+          Janta
         </Navbar.Brand>
         <NavLink style={{ color: "#999", textDecoration: "none" }} exact to="/">
           Home
